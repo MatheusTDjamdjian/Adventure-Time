@@ -1,1 +1,47 @@
 @charset "UTF-8";
+
+@font-face {
+    font-family: 'Dosis-SemiBold';
+    src: url(./fontes/Dosis-SemiBold.ttf) format(TrueType);
+    font-weight: 700;
+}
+
+:root {
+    --corfundoprincipal: #217eb5;
+    --corletras: #f5c537;
+    --corletras2: #e4ecf9;
+    --cormenuerodape: #3295d3;
+
+    --fonteprincipal: 'Dosis-SemiBold';
+}
+
+* {
+    list-style-type: none;
+    font-family: var(--fonteprincipal), sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-menu {
+    text-align: center;
+    background-color: var(--cormenuerodape);
+    height: 50px;
+    padding-top: 20px;
+}
+
+.itens-menu {
+    display: inline;
+    color: var(--corletras);
+    margin-right: 40px;
+}
+
+.itens-menu>a {
+    color: var(--corletras);
+}
+
+.itens-menu a:hover {
+    transition-duration: .2s;
+    background-color: #217eb5;
+    padding: 8px;
+}
