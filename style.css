@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "UTF-8";A
 
 @font-face {
     font-family: 'Dosis-SemiBold';
@@ -6,42 +6,309 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: 'AdventureTime';
+    src: url(./fontes/AdventureTime.ttf) format(TrueType);
+    font-weight: 700; }
+
 :root {
     --corfundoprincipal: #217eb5;
-    --corletras: #f5c537;
+    --corletras: #d1a112;
     --corletras2: #e4ecf9;
     --cormenuerodape: #3295d3;
-
     --fonteprincipal: 'Dosis-SemiBold';
+    --fontefiguras: 'AdventureTime';
 }
-
 * {
     list-style-type: none;
     font-family: var(--fonteprincipal), sans-serif;
     text-decoration: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
+body {
+    background-color: var(--corfundoprincipal);
+}
+button {
+    cursor: pointer;
+}
+.div-fundo {
+    background-color: var(--corfundoprincipal);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.conteudo {
+    width: 700px;
+}
 .lista-menu {
     text-align: center;
     background-color: var(--cormenuerodape);
-    height: 50px;
-    padding-top: 20px;
+    height: 60px;
+    padding-top: 0;
+    margin-bottom: 20px;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
 }
-
 .itens-menu {
-    display: inline;
+    display: inline-block;
     color: var(--corletras);
-    margin-right: 40px;
+    font-size: 16px;
+    text-align: center;
 }
-
 .itens-menu>a {
     color: var(--corletras);
+    display: block;
+    padding: 20px;
 }
-
 .itens-menu a:hover {
     transition-duration: .2s;
     background-color: #217eb5;
-    padding: 8px;
 }
+.titulo-figuras {
+    font-family: var(--fontefiguras);
+    font-size: 108px;
+}
+.titulo-inicio {
+    color: var(--corletras);
+    padding: 30px;
+    font-size: 50px;
+    text-align: center;
+}
+.descricao-inicio {
+    color: var(--corletras);
+    font-weight: bolder;
+    text-align: center;
+    
+    font-size: 25px;
+}
+.div-botao {
+    display: flex;
+    justify-content: flex-end;
+}
+.div-botao button { 
+    border: none;
+    color: var(--corfundoprincipal);
+    background-color: var(--corletras);
+    height: 50px;
+    width: 110px;
+    padding: 10px;
+    margin-top: 18px;
+    margin-bottom: 45px;
+}
+.div-botao button:hover {
+    background-color: var(--cormenuerodape);
+    color: var(--corletras);
+    transition-duration: 0.2s;
+}
+.div-botao span {
+    font-size: 26px;
+    margin-left: 0.1px;
+    padding-right: 10px;
+}
+.hr1 {
+    
+    color: var(--cormenuerodape);
+}
+.div-traco {
+    background-color: var(--cormenuerodape);
+    height: 1.5px;
+    width: 700px;
+    outline-width: 20px;
+}
+.texto-amarelo-dois {
+    color: var(--corletras);
+    font-weight: bolder;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 45px; 
+    width: 650px;
+}
+.texto-amarelo-tres {
+    color: var(--corletras);
+    font-weight: bolder;
+    text-align: left;
+    font-size: 18px;
+    width: 300px;
+}
+.palavra-destaque {
+    color: var(--corletras);
+}
+.texto-branco {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    color: var(--corletras2);
+}
+.texto-branco-um, 
+.texto-branco-dois {
+    width: 50%;
+    padding: 10px;
+}
+.marcadores {
+    height: 15px;
+    margin-right: 7px;
+}
+.lista-info {
+    color: var(--corletras2);
+    padding-top: 13px;
+    padding-bottom: 50px;
+}
+.linha-figuras > div {
+    padding: 10px;
+    width: 25%;
+    height: 25%;
+}
+.linha-figuras > div:nth-child(1){
+    padding-left: 0;
+}
+.linha-figuras > div:nth-child(4){
+    padding-right: 0;
+}
+.figuras-meio {
+    font-family: var(--fontefiguras);
+    font-size: 40px;
+    color: var(--corfundoprincipal);
+    background-color: var(--corletras);
+    border: none;
+    padding: 10px;
+    width: 100%;
+}
+.linha-figuras {
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.figuras-meio:hover {
+    color: var(--corletras);
+    background-color: var(--cormenuerodape);
+    transition-duration: 0.2s;
+}
+.texto-amarelo-quatro {
+    color: var(--corletras);
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+.texto-amarelo-quatro p {
+    font-size: 17px;
+}
+.texto-branco-tres {
+    color: var(--corletras2);
+    font-size: 16px;
+    padding-top: 20px;
+    padding-top: 10px;
+    width: 50%;
+}
+.button2 button {
+    background-color: var(--corletras);
+    color: var(--corfundoprincipal);
+    border: none;
+    margin-top: 15px;
+    padding: 5px;
+    width: 50px;
+}
+.button2 {
+    display: flex;
+    justify-content: flex-end;
+}
+.button2 button:hover {
+    background-color: var(--cormenuerodape);
+    color: var(--corletras);
+    transition-duration: 0.2s;
+}
+.button2 p {
+    font-size: 20px;
+}
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--cormenuerodape);
+    height: auto;
+    margin-top: 50px;
+}
+.figura-rodape{
+    color: var(--corfundoprincipal);
+    font-family: var(--fontefiguras);
+}
+.figura-rodape {
+    padding-top: 50px;
+    font-size: 80px;
+    padding-bottom: 30px;
+}
+.rodape p {
+    font-family: var(--fonteprincipal);
+    text-align: center;
+    color: var(--corletras2);
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.input-formatacao input{
+    background-color: var(--cormenuerodape);
+    color: var(--corletras);
+    padding: 5px;
+    margin-bottom: 12px; 
+    border: none;
+    border-top: 3px solid #185f88;
+    border-right: 3px solid #185f88;
+    width: 100%;
+    display: flex;
+    justify-content: right
+}
+.caixa-texto {
+    width: 50%;
+    padding: 10px;
+}
+.div-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.input-formatacao input::placeholder{
+    color: var(--corfundoprincipal);
+}
+@media (max-width: 750px) {
+    .conteudo {
+        padding: 15px;}
+    .conteudo,
+    .div-traco,
+    .texto-amarelo-dois,
+    .texto-branco-tres, 
+    .caixa-texto {
+        width: 100%;}
+    .caixa-texto {
+        padding: 10px 0;}
+    .lista-info {
+        padding-bottom: 15px;}
+    .linha-figuras > div {
+        width: 50%;}
+    .linha-figuras > div:nth-child(odd){
+        padding-left: 0;}
+    .linha-figuras > div:nth-child(even){
+        padding-right: 0;}
+    .texto-amarelo-dois {
+        text-align: left;
+        margin-bottom: 10px;}
+}
+@media (max-width: 550px) {
+    .texto-branco-um,
+    .texto-branco-dois {
+        width: 100%;}
+}
+@media (max-width: 350px) {
+    .lista-menu {
+        height: auto;}
+    .lista-menu .itens-menu {
+        width: 100%;}
+    .titulo-inicio {
+        padding: 0;
+        margin-bottom: 10px;}
+}
+.fig-btn {
+    width: 100%;}
